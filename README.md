@@ -12,4 +12,4 @@ Para conseguir visualizar os dashboards através do power bi deve:
 
 Depois de executar os passos anteiores, conseguirá visualizar os dashboards dentro da ferramenta.
 
-Para colocar o website a funcionar localmente no computador deverá ter o django instalado no seu computador. Pode seguir os passos que se encotram neste website:https://docs.djangoproject.com/en/4.2/intro/tutorial01/
+Para colocar o website a funcionar localmente no computador deverá ter o django instalado no seu computador. Pode seguir os passos que se encotram neste website: https://docs.djangoproject.com/en/4.2/intro/tutorial01/
