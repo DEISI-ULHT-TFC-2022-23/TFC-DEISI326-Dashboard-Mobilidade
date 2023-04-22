@@ -9,3 +9,5 @@ Para conseguir visualizar os dashboards através do power bi deve:
 - Selecionar a opção de aplicar alterações.
 
 Depois de executar os passos anteiores, conseguirá visualizar os dashboards dentro da ferramenta.
+
+O link para o website é o seguinte: http://tmldashboards.pythonanywhere.com/
