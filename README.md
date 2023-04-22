@@ -1,7 +1,7 @@
 # TFC-DEISI326-DashboardsMobilidade
 Trabalho final de curso
 
-Para colocar o website a funcionar localmente no computador deve seguir os passos que se encontam neste website: https://docs.djangoproject.com/en/4.2/intro/tutorial01/
+O link para o website é o seguinte: http://tmldashboards.pythonanywhere.com/
 
 Para conseguir visualizar os dashboards através do power bi deve:
 - Abrir o ficheiro tfc.pbix
@@ -12,4 +12,4 @@ Para conseguir visualizar os dashboards através do power bi deve:
 
 Depois de executar os passos anteiores, conseguirá visualizar os dashboards dentro da ferramenta.
 
-O link para o website é o seguinte: http://tmldashboards.pythonanywhere.com/
+Para colocar o website a funcionar localmente no computador deverá ter o django instalado no seu computador. Pode seguir os passos que se encotram neste website:https://docs.djangoproject.com/en/4.2/intro/tutorial01/
