@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+{% load static %} {% with url_name=request.resolver_match.url_name %}
+<html lang="pt">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="icon" href="{% static 'dash/images/ULHT.jpg' %}" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Martim Teixeira" />
+    <link rel="stylesheet" href="{% static 'dash/css/style.css' %}" />
+    <title>IMOB Dashboard</title>
+  </head>
+  <body>
+    <header>
+      <div class="sidebar" id="myTopnav">
+        <a class="image" href="{% url 'imob:home' %}"
+          ><img
+            src="{% static 'dash/images/aml.png' %}"
+            alt="AML logo"
+            class="imglogo"
+        /></a>
+        <a
+          href="{% url 'imob:home' %}"
+          class="{% if url_name == 'home' %}active{% endif %}"
+          >Início</a
+        >
+        <a
+          href="{% url 'imob:imobpage' %}"
+          class="{% if url_name == 'imobpage' %}active{% endif %}"
+          >Dados IMOB</a
+        >
+        <a
+          href="{% url 'imob:aml' %}"
+          class="{% if url_name == 'aml' %}active{% endif %}"
+          >AML</a
+        >
+        <div class="dropdown">
+          <button onclick="changepage()" class="dropdown-btn">
+            Dashboards Mobilidade
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-container" id="container-drop">
+            <a href="#" onclick="pbFunc('page1')" id="page1" class=""
+              >População e Municípios</a
+            >
+            <a href="#" onclick="pbFunc('page2')" id="page2" class=""
+              >Caracterização população</a
+            >
+            <a href="#" onclick="pbFunc('page3')" id="page3" class=""
+              >Despesas população</a
+            >
+            <a href="#" onclick="pbFunc('page4')" id="page4">Tipo transporte</a>
+            <a href="#" onclick="pbFunc('page5')" id="page5"
+              >Deslocações diárias</a
+            >
+            <a href="#" onclick="pbFunc('page6')" id="page6"
+              >Tipo de estacionamento</a
+            >
+            <a href="#" onclick="pbFunc('page7')" id="page7"
+              >Duração e distância deslocações</a
+            >
+            <a href="#" onclick="pbFunc('page8')" id="page8"
+              >Deslocações intramunicipais</a
+            >
+            <a href="#" onclick="pbFunc('page9')" id="page9"
+              >Deslocações intermunicipais</a
+            >
+            <a href="#" onclick="pbFunc('page10')" id="page10"
+              >Destino deslocações intermunicipais</a
+            >
+            <a href="#" onclick="pbFunc('page11')" id="page11"
+              >Distribuição deslocações</a
+            >
+            <a href="#" onclick="pbFunc('page12')" id="page12"
+              >Densidade deslocações</a
+            >
+            <a href="#" onclick="pbFunc('page13')" id="page13"
+              >Automóvel vs Transportes públicos</a
+            >
+            <a href="#" onclick="pbFunc('page14')" id="page14"
+              >Transportes públicos</a
+            >
+            <a href="#" onclick="pbFunc('page15')" id="page15"
+              >Utilização automóvel</a
+            >
+            <a href="#" onclick="pbFunc('page16')" id="page16"
+              >Utilização transportes públicos</a
+            >
+            <a href="#" onclick="pbFunc('page17')" id="page17">Avaliação</a>
+          </div>
+        </div>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()"
+          >&#9776;</a
+        >
+      </div>
+    </header>
+    <main>{% block main %} {% endblock main %}</main>
+    <footer>
+      <p>
+        Trabalho Final de Curso - Martim Teixeira <br />
+        Universidade Lusófona ©2023
+      </p>
+    </footer>
+  </body>
+  <script src="{% static 'dash/javascript/script.js' %}"></script>
+</html>
+{% endwith %}
