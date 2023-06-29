@@ -1,4 +1,4 @@
-# TFC-DEISI326-DashboardsMobilidade
+# Dashboards Mobilidade na AML
 Trabalho final de curso
 
 O link para o website é o seguinte: http://tmldashboards.pythonanywhere.com/
