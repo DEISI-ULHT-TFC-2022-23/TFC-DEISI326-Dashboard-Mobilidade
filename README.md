@@ -3,6 +3,8 @@ Trabalho final de curso
 
 O link para o website é o seguinte: http://tmldashboards.pythonanywhere.com/
 
+O link para o vídeo que demonstra a solução final é o seguinte: https://youtu.be/qvXAojwoTqo
+
 Para conseguir visualizar os dashboards através do power bi deve:
 - Abrir o ficheiro tfc.pbix
 - Entrar no separador transformar dados
