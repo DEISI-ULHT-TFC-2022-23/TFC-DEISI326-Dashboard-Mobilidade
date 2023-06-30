@@ -6,7 +6,7 @@ O link para o website é o seguinte: http://tmldashboards.pythonanywhere.com/
 Para conseguir visualizar os dashboards através do power bi deve:
 - Abrir o ficheiro tfc.pbix
 - Entrar no separador transformar dados
-- Encontrar a variável na barra lateral denominada de "path"
+- Encontrar as variáveis na barra lateral "path", "path LatELon" e "path corr"
 - Alterar para a localização em que se encontram os dados no seu computador
 - Selecionar a opção de aplicar alterações.
 
