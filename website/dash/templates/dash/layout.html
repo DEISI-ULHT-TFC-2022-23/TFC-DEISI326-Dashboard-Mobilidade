@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+{% load static %} {% with url_name=request.resolver_match.url_name %}
+<html lang="pt">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="icon" href="{% static 'dash/images/ULHT.jpg' %}" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Martim Teixeira" />
+    <link rel="stylesheet" href="{% static 'dash/css/style.css' %}" />
+    <title>IMOB Dashboard</title>
+  </head>
+  <body>
+    <header>
+      <div class="sidebar" id="myTopnav">
+        <div class="">
+          <a class="image" href="{% url 'imob:home' %}"
+            ><img
+              src="{% static 'dash/images/aml.png' %}"
+              alt="AML logo"
+              class="imglogo"
+            />
+            <img
+              src="{% static 'dash/images/TML.png' %}"
+              alt="AML logo"
+              class="imgTML2"
+              style="padding-bottom: 18px"
+            />
+          </a>
+        </div>
+        <a
+          href="{% url 'imob:home' %}"
+          class="{% if url_name == 'home' %}active{% endif %}"
+          >Início</a
+        >
+        <a
+          href="{% url 'imob:contextualizacao' %}"
+          class="{% if url_name == 'contextualizacao' %}active{% endif %}"
+          >Contextualização</a
+        >
+        <div class="dropdown">
+          <button onclick="changepage()" class="dropdown-btn" id="button1">
+            Informações sobre população
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-container" id="container-drop">
+            <a href="#" onclick="pbFunc('page1')" id="page1" class=""
+              >População e Municípios</a
+            >
+            <a href="#" onclick="pbFunc('page2')" id="page2" class=""
+              >Caracterização população</a
+            >
+            <a href="#" onclick="pbFunc('page3')" id="page3" class=""
+              >Despesas população</a
+            >
+          </div>
+          <div class="dropdown">
+            <button onclick="changepage()" class="dropdown-btn" id="button2">
+              Mobilidade na <br />AML
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-container" id="container-drop2">
+              <a href="#" onclick="pbFunc2('page4')" id="page4"
+                >Tipo transporte</a
+              >
+              <a href="#" onclick="pbFunc2('page5')" id="page5"
+                >Deslocações diárias</a
+              >
+              <a href="#" onclick="pbFunc2('page6')" id="page6"
+                >Tipo de estacionamento</a
+              >
+              <a href="#" onclick="pbFunc2('page7')" id="page7"
+                >Duração e distância deslocações</a
+              >
+              <a href="#" onclick="pbFunc2('page8')" id="page8"
+                >Deslocações intramunicipais</a
+              >
+              <a href="#" onclick="pbFunc2('page9')" id="page9"
+                >Deslocações intermunicipais</a
+              >
+              <a href="#" onclick="pbFunc2('page10')" id="page10"
+                >Destino deslocações intermunicipais</a
+              >
+              <a href="#" onclick="pbFunc2('page11')" id="page11"
+                >Distribuição deslocações</a
+              >
+              <a href="#" onclick="pbFunc2('page12')" id="page12"
+                >Densidade deslocações</a
+              >
+            </div>
+          </div>
+          <div class="dropdown">
+            <button onclick="changepage()" class="dropdown-btn" id="button3">
+              Avaliação e opiniões
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-container" id="container-drop3">
+              <a href="#" onclick="pbFunc3('page13')" id="page13"
+                >Automóvel vs Transportes públicos</a
+              >
+              <a href="#" onclick="pbFunc3('page14')" id="page14"
+                >Transportes públicos</a
+              >
+              <a href="#" onclick="pbFunc3('page15')" id="page15"
+                >Utilização automóvel</a
+              >
+              <a href="#" onclick="pbFunc3('page16')" id="page16"
+                >Utilização transportes públicos</a
+              >
+              <a href="#" onclick="pbFunc3('page17')" id="page17"
+                >Avaliação transportes públicos</a
+              >
+            </div>
+          </div>
+          <div class="dropdown">
+            <button onclick="changepage()" class="dropdown-btn" id="button4">
+              Correlações entre variáveis
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-container" id="container-drop4">
+              <a href="#" onclick="pbFunc4('page18')" id="page18"
+                >Matriz de correlação</a
+              >
+              <a href="#" onclick="pbFunc4('page19')" id="page19"
+                >Outras correlações</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="space"></div>
+        <div class="imagebox" style="background-color: white">
+          <img
+            src="{% static 'dash/images/TML.png' %}"
+            alt="AML logo"
+            class="imgTML"
+          />
+        </div>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()"
+          >&#9776;</a
+        >
+      </div>
+    </header>
+    <main>{% block main %} {% endblock main %}</main>
+    <footer>
+      <p>
+        Martim Teixeira - Trabalho Final de Curso<br />
+        Licenciatura em Informática de Gestão, Universidade Lusófona ©2023
+      </p>
+    </footer>
+  </body>
+  <script src="{% static 'dash/javascript/script.js' %}"></script>
+</html>
+{% endwith %}
